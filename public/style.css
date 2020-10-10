@@ -1,0 +1,83 @@
+.main{
+    background-color:#d97fe0!important;
+    
+    background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+width: 100vw;
+height: 100vh;
+border: 8px solid #d742e2;
+margin: auto;
+}
+.front{
+    min-height: 100vh;
+}
+body{
+    background-color: #8a008a!important;
+background-image: url(http://www.transparenttextures.com/patterns/diagmonds-light.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+}
+.text{
+    height: 16%;
+    width: 100%;
+    background-color:rgb(49 2 93);
+    color: blanchedalmond;
+    text-align: center!important;
+    font-size: 3.5rem;
+    font-family: 'Peddana', serif;
+}
+.row{
+    margin: 0!important;
+}
+.coli{
+    background-color: #ad25a9;
+    padding: 0!important;
+    border: 1px solid #d742e2;
+    font-size: 2.5rem;
+    color: white;
+}
+.colu{
+    background-color: #ad25a9;
+    padding: 0!important;
+    border: 1px solid #d742e2;
+    font-size: 2.5rem;
+    color: white;
+}
+.sec,.third{
+    height: 17%;
+}
+.fourth{
+    height: 33%;
+
+}
+
+.f{
+    height: 50%;
+}
+.ac{
+    background-color: #820868;
+    text-align: center;
+}
+.eq{
+    background-color: #26055a;
+}
+.c{
+    background-color: #b148ad;
+}
+.bts{
+    height: 100%;
+    padding: 6px;
+
+}
+
+p {
+    margin-top: 6%!important;
+    margin-bottom: 1rem;
+}
+.coli:hover{
+    border-color: white;
+}
+.display{
+  
+    font-size: 7vw;
+}
