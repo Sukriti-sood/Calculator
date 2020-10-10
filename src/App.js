@@ -15,13 +15,15 @@ function setNumber(value){
   }
   
   else{
-  if(text.length==1&&text=="0")
+  if(text.length===1&&text==="0")
   {
     setText(value.toString());
   }
   else
   setText(`${text}${value}`);
 }
+console.log(ans);
+console.log(text);
 }
 function setoperator(value){
   if(text.length>20)
@@ -33,12 +35,56 @@ function setoperator(value){
   else
   setText(`${text}${value}`);
   
-  if(prevop==null)
+  console.log(text);
+
+  if(prevop==null){
   setprev(value);
   const ansv=parseInt(text.slice(0));
   setAns(ansv);
+
+  }
+  else
+  {
+    var an=presult(prevop);
+    setAns(an);
+    setprev(value);
+
+  }
   
 
+}
+function presult(prev){
+  var ansr;
+  var index=text.lastIndexOf(prev);
+  var num=parseInt(text.slice(index+1));
+  switch(prev)
+    {
+      case "/":
+        {
+           ansr=ans/num;
+        }
+        break;
+        case "+":
+          {
+           ansr=ans+num;
+          
+          }
+          break;
+          case "*":
+            {
+           ansr=ans*num;
+            setAns(ansr);
+           
+            }
+            break;
+            case "-":{
+           ansr=ans-num;
+  
+            }
+            break;
+    }
+    console.log(ansr)
+    return ansr;
 }
 function acclick(){
   setText("0");
@@ -50,44 +96,42 @@ function result(){
     {
       case "/":
         {
-          var index=text.indexOf('/');
+          var index=text.lastIndexOf('/');
           var num=parseInt(text.slice(index+1));
           var ansr=ans/num;
             setAns(ansr);
-            setText(ansr);
-            setprev(null);
+            setText(ansr.toString());
         }
         break;
         case "+":
           {
-            var index=text.indexOf('+');
+            var index=text.lastIndexOf('+');
             var num=parseInt(text.slice(index+1));
           var ansr=ans+num;
             setAns(ansr);
-            setText(ansr);
-            setprev(null);
+            setText(ansr.toString());
           }
           break;
-          case "x":
+          case "*":
             {
-              var index=text.indexOf('x');
+              var index=text.lastIndexOf('x');
               var num=parseInt(text.slice(index+1));
           var ansr=ans*num;
             setAns(ansr);
-            setText(ansr);
-            setprev(null);
+            setText(ansr.toString());
             }
             break;
             case "-":{
-              var index=text.indexOf('-');
+              var index=text.lastIndexOf('-');
               var num=parseInt(text.slice(index+1));
           var ansr=ans-num;
             setAns(ansr);
-            setText(ansr);
-            setprev(null);
+            setText(ansr.toString());
+  
             }
             break;
     }
+    setprev(null)
 }
 
   return (

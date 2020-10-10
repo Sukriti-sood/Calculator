@@ -10,8 +10,8 @@ function Buttons(props){
           <div className=" coli c text-center col-3" onClick={()=>props.setOp("/")}>
           <p>/</p>
           </div>
-          <div className=" coli c text-center col-3" onClick={()=>props.setOp("x")}>
-          <p>x</p>
+          <div className=" coli c text-center col-3" onClick={()=>props.setOp("*")}>
+          <p>*</p>
           </div>
         </div>
         <div className="row third">
