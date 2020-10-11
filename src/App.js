@@ -114,7 +114,7 @@ function result(){
           break;
           case "*":
             {
-              var index=text.lastIndexOf('x');
+              var index=text.lastIndexOf('*');
               var num=parseInt(text.slice(index+1));
           var ansr=ans*num;
             setAns(ansr);
